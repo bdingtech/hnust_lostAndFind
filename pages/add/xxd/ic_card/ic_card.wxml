@@ -1,0 +1,35 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">校园卡</view>
+</cu-custom>
+
+<view class="weui-cells__title">请填写基本信息</view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="cu-form-group margin-top">
+    <view class="title">失主姓名</view>
+    <input focus="true" name="losterName"  placeholder="请输入拾到卡上的姓名"></input>
+
+  </view>
+    <view class="cu-form-group">
+    <view class="title">卡号</view>
+    <input type="number" name="id" placeholder="请输入拾到校园卡的卡号"></input>
+  </view>
+   <view class="weui-cells__title">请选择所在中队办公室</view>
+   	<radio-group bindchange="radioChange" class="block">
+		<view class="cu-form-group">
+			<view class="title">一中队办公室</view>
+			<radio checked="{{isSelect1}}" value="1" ></radio>
+		</view>
+		<view class="cu-form-group">
+			<view class="title">二中队办公室</view>
+			<radio checked="{{isSelect2}}" value="2"></radio>
+		</view>
+	</radio-group>
+
+
+<view class="padding flex flex-direction">
+  <button form-type="submit" bindtap="onAdd" class="cu-btn bg-green lg">提交</button>
+  <button  bindtap="endSubmit" class="cu-btn  lg">结束提交</button> 
+</view>
+</form>
+

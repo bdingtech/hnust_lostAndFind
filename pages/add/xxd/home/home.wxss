@@ -1,0 +1,13 @@
+page{
+    background-color: #FFFFFF;
+}
+.weui-msg__opr-area {
+  margin-top: 100px;
+}
+.weui-msg__text-area{
+  margin-top: 100px;
+}
+.weui-msg__title{
+  font-size: 80rpx;
+  font-family: NSimSun	
+}

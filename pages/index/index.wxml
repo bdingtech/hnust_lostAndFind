@@ -1,0 +1,59 @@
+
+<scroll-view scroll-y class="scrollPage bg-gray">
+
+  <image src='/images/shiwuzhaoling4.png' mode='widthFix' class='png' style='width:100%;vertical-align:top;height:486rpx'></image>
+
+
+  <view class="waveWrapper waveAnimation">
+    <view class="waveWrapperInner bgTop">
+      <view class="wave waveTop" style="background-image:url('https://bdimges.oss-cn-shenzhen.aliyuncs.com/miniProgram/wave-top.png')"></view>
+    </view>
+    <view class="waveWrapperInner bgMiddle">
+      <view class="wave waveMiddle" style="background-image:url('https://bdimges.oss-cn-shenzhen.aliyuncs.com/miniProgram/wave-mid.png')"></view>
+    </view>
+    <view class="waveWrapperInner bgBottom">
+      <view class="wave waveBottom" style="background-image:url('https://bdimges.oss-cn-shenzhen.aliyuncs.com/miniProgram/wave-bot.png')"></view>
+    </view>
+  </view>
+
+  <view class="nav-list">
+    <navigator open-type="navigate" hover-class='none' url="/pages/{{item.nicname}}/{{item.nicname}}" class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key>
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class='icon-{{item.icon}}'></text>
+    </navigator>
+
+        <navigator bindtap="bindMore" open-type="navigate" hover-class='none'  class="nav-li bg-red" >
+      <view class="nav-title">更多</view>
+      <view class="nav-name">敬请期待...</view>
+      <text class='icon-more'></text>
+    </navigator>
+  </view>
+   
+  <view class='cu-tabbar-height'></view>
+
+</scroll-view>
+
+
+<view class="cu-bar tabbar bg-white foot">
+    <view class="action text-green">
+      <view class="icon-homefill"></view> 首页
+    </view>
+    
+    <view class="action text-gray add-action">
+    <navigator hover-class='none' url="/pages/add/home/home">
+      <button class="cu-btn icon-add bg-green shadow"></button>
+      发布
+      </navigator>
+    </view>
+
+    <view class="action text-gray" bindtap="nav">
+      <view class="icon-my">
+        <view class="cu-tag badge"></view>
+      </view>
+       <!-- <navigator url="/pages/about/home/home">关于</navigator> -->
+       关于
+    </view>
+    </view>
+
+

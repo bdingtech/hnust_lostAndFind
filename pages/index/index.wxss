@@ -1,0 +1,88 @@
+/**index.wxss**/
+@import "/colorui/animation.wxss";
+@keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(1);
+  }
+
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+.waveWrapper {
+  overflow: hidden;
+  position: relative;
+  height: 60rpx;
+  width: 100%;
+  background: #57bab4;
+}
+
+.waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: -1px;
+}
+
+.bgTop {
+  z-index: 15;
+  opacity: 0.5;
+  height: 24px;
+}
+
+.bgMiddle {
+  z-index: 10;
+  opacity: 0.75;
+  height: 19px;
+}
+
+.bgBottom {
+  z-index: 5;
+  height: 14px;
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  width: 2160px;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+
+.wave image {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.waveTop {
+  background-size: 540px 25px;
+}
+
+.waveAnimation .waveTop {
+  animation: move_wave 30s linear infinite;
+}
+
+.waveMiddle {
+  background-size: 1080px 20px;
+}
+
+.waveAnimation .waveMiddle {
+  animation: move_wave 24s linear infinite;
+}
+
+.waveBottom {
+  background-size: 540px 15px;
+}
+
+.waveAnimation .waveBottom {
+  animation: move_wave 12s linear infinite;
+}

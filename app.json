@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/ic_card/ic_card",
+    "pages/id_card/id_card",
+    "pages/credit_card/credit_card",
+    "pages/more/more",
+    "pages/logs/logs",
+    "pages/about/home/home",
+    "pages/add/ic_card/ic_card",
+    "pages/add/id_card/id_card",
+    "pages/add/credit_card/credit_card",
+    "pages/add/feedback/feedback",
+    "pages/add/home/home",
+    "pages/add/xxd/home/home",
+    "pages/add/xxd/ic_card/ic_card",
+    "pages/add/xxd/id_card/id_card",
+    "pages/add/xxd/credit_card/credit_card"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "Color UI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "cloud": true
+}

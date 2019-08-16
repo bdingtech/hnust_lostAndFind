@@ -1,0 +1,23 @@
+<cu-custom bgColor="bg-gray" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <!-- <view slot="content">校园卡</view> -->
+</cu-custom>
+
+<view class="page">
+    <view class="weui-msg">
+
+        <view class="weui-msg__text-area">
+            <view class="weui-msg__title">批量提交模式</view>
+
+            <view class="weui-msg__desc">此模式适用于学生安全信息队失物招领小组批量提交遗失物品信息。第一次提交成功后，页面会自动跳转，且中队办公室会自动选定，以提高工作效率.<navigator url="" class="weui-msg__link"></navigator></view>
+        </view>
+        <view class="weui-msg__opr-area">
+            <view class="weui-btn-area">
+                <button class="weui-btn" type="primary" bindtap="open">立即开始</button>
+            </view>
+        </view>
+        <view class="weui-msg__extra-area">
+         
+        </view>
+    </view>
+</view>

@@ -1,0 +1,158 @@
+  <cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">银行卡</view>
+  </cu-custom>
+  <!-- 标题 -->
+
+<!--<view class="title">校园卡搜索</view>--!>
+ 
+<!-- 搜索框view -->
+<view class="search_con">
+ 
+<!-- 表单 -->
+  <form>
+  <!-- 记得设置name值，这样JS才能接收name=keyword的值 -->
+    <input focus="true" type="number" value="{{inputValue}}" bindinput="inputBind" name="keyword" class="search_input" placeholder='请输入你的银行卡卡号'/>
+
+    <button class="weui-btn"  bindtap="onQuery" type="primary">搜索</button>
+    <!-- <button formType="submit" bindtap="onQuery" class="search_btn">搜索</button>     -->
+  </form>
+</view>
+
+
+    <view class="page__bd" wx:if="{{queryResult}}">
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <!-- <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">姓名</view>
+                    <view class="weui-form-preview__value_in-hd">{{losterName}}</view>
+                </view> -->
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">银行卡号</view>
+                    <view class="weui-form-preview__value_in-hd">{{id}}</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <!-- <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">学号</view>
+                    <view class="weui-form-preview__value">{{id}}</view>
+                </view> -->
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">拾到者称呼</view>
+                    <view class="weui-form-preview__value">{{finderName}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">联系方式</view>
+                    <view class="weui-form-preview__value">{{tel}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">提交时间</view>
+                    <view class="weui-form-preview__value">{{due}}</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__ft" bindtap="calling">
+                <navigator url="" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">拨打联系人电话</navigator>
+            </view>
+          </view>
+        </view>
+
+
+<!-- 信息队提交区域 -->
+    <view class="page__bd" wx:if="{{xxd}}">
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">姓名</view>
+                    <view class="weui-form-preview__value_in-hd">{{losterName}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">学号</view>
+                    <view class="weui-form-preview__value_in-hd">{{id}}</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <!-- <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">学号</view>
+                    <view class="weui-form-preview__value">{{id}}</view>
+                </view> -->
+                <!-- <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">联系方式</view>
+                    <view class="weui-form-preview__value">{{tel}}</view>
+                </view> -->
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">提交时间</view>
+                    <view class="weui-form-preview__value">{{due}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">取回地点</view>
+                    <!-- 南校 -->
+                    <view wx:if="{{location == 1}}">
+                      <view class="weui-form-preview__value" >学生安全信息队一中队办公室</view>
+                      <view class="weui-form-preview_value" >(第一教学楼东侧南校心理健康中心楼下)</view>
+                <!-- <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">备注</view>
+                    <view class="weui-form-preview__value">请携带有效证件</view>
+                </view>  -->
+                    <!-- 地图 -->
+                        <view class="page-body">
+                           <view class="page-section page-section-gap">
+                            <map
+                              id="myMap"
+                              style="width: 100%; height: 300px;"
+                              subkey="RFNBZ-DDDWF-3YYJK-JWC2S-JWRS3-HYF7S"
+                              latitude="27.89572"
+                              longitude="112.924368"
+                              markers="{{markers1}}"
+                              show-location
+                            ></map>
+                        </view>
+                    </view>
+                    </view>
+
+                    <!-- 北校 -->
+                    <view wx:if="{{location ==2}}">
+                      <view class="weui-form-preview__value" >学生安全信息队二中队办公室</view>
+                      <view class="weui-form-preview__value" >北校医院前的保卫处大院</view>
+                    <!-- 地图 -->
+                        <view class="page-body">
+                           <view class="page-section page-section-gap">
+                            <map
+                              id="myMap"
+                              style="width: 100%; height: 300px;"
+                              subkey="RFNBZ-DDDWF-3YYJK-JWC2S-JWRS3-HYF7S"
+                              latitude="27.904679"
+                              longitude="112.910330"
+                              markers="{{markers2}}"
+                              show-location
+                            ></map>
+                        </view>
+                    </view>
+                    </view>
+
+                </view>
+            </view>
+            <view class="weui-form-preview__ft" >
+                <navigator url="" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">请失主尽快携带有效证件到相关地点领取</navigator>
+            </view>
+          </view>
+        </view>
+
+
+<!-- <view class="search_result">
+<text class="search_result" wx:if="{{queryResult}}">
+      姓名:{{losterName}}
+      学号:{{id}}
+      拾到者姓名：{{finderName}}
+      拾到者联系方式：{{tel}}
+      提交时间:{{due}}
+</text>
+</view> -->
+<!-- 搜索结果展示 -->
+<view wx:for="{{re}}" wx:key="re" class="search_result">
+<!-- 当提交空白表单的时候 -->
+  <view class="empty">{{item.empty}}</view>
+  <!-- 当有搜索结果的时候 -->
+  <view class="resname">{{item.resname}}</view>
+  <!-- 当查询不到结果的时候 -->
+  <view class="noresult">{{item.noresult}}</view>
+</view>

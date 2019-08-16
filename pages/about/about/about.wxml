@@ -1,0 +1,11 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">关于</view></cu-custom>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于湖科大失物招领</view>
+  <view class='text-content'>
+    <view>Hi！欢迎使用湖科大失物招领小程序！</view>
+    <view class='margin-top-sm'>该项目是我个人开发的一个小项目，基于ColorUi的设计使得页面干净整洁，同时小程序后端全部采用腾讯云提供的云开发组件，安全性和效率有了极大的提高。</view>
+    <view class='margin-top-sm'>项目在不断的推进中，且不收取任何费用，如果这个项目有帮到你，或者你觉得很赞，可以扫描赞赏码支持一下！</view>
+    <view class='margin-top-sm'>该项目使用到了文晓港的ColorUi组件库以及微信团队开发的WeUi设计组件。向可爱的程序员们致敬，向Web前端致敬٩(๑❛ᴗ❛๑)۶</view>
+    <view class='margin-top-sm'>更多功能敬请期待！</view>
+  </view>
+</view>
