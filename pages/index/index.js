@@ -34,13 +34,13 @@ Component({
       icon: 'vipcard',
       nicname:'credit_card'
     },
-    // {
-    //   title: '更多 ',
-    //   name: '敬请期待...',
-    //   color: 'red',
-    //   icon: 'more',
-    //   nicname: "more"
-    // },
+    {
+      title: '学生证 ',
+      name: 'Stu_card',
+      color: 'red',
+      icon: 'more',
+      nicname: "stu_card"
+    },
     ],
   },
   methods: {
@@ -55,6 +55,7 @@ Component({
     nav: function () {
       wx.navigateTo({
         url: '/pages/about/home/home'
+        // url: '/pages/square/square'
       })
     },
     onLoad() {
@@ -96,6 +97,15 @@ Component({
         })
       }, 1000)
     },
+
+    onShow: function (e) {
+      this.setData({
+        msgList: [
+          { title: "已帮助3412人找回离家出走的校园卡、身份证等物品" },
+          { title: "交了20多年的国内漫游费将取消 你能省多少话费？" },
+          { title: "北大教工合唱团出国演出遇尴尬:被要求给他人伴唱" }]
+      });
+    }
     // onShareAppMessage() {
     //   return {
     //     title: 'ColorUI-高颜值的小程序UI组件库',

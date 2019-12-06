@@ -1,8 +1,35 @@
 <cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">日志</view></cu-custom>
+
+
 <view class="cu-timeline">
+ <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v2.0.1</view>
+        <view class="cu-tag line-white">2019/12/01</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.感谢波哥反馈重大查询bug，现已修复</view>
+        <view>1.感谢邱神打赏支持，谢谢认可，自我感觉小程序没有做好，深表惭愧！</view>
+        <view>2.近期考试繁多，开发进度缓慢，动力不足</view>
+        <view>3.如果大家使用的过程中发现有任何bug，以及任何建议都可以在加我微信与我反馈</view>
+      </view>
+    </view>
+  </view>  
 
-
-  
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v2.0</view>
+        <view class="cu-tag line-white">2019/11/03</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.后端采用TP5框架全新重构，有效抵抗各类注入攻击 </view>
+        <view>2.修复了身份证键盘无法输入英文字母的bug</view>
+        <view>3.优化了短信发送接口，在后端完成调用，确保安全性</view>
+      </view>
+    </view>
+  </view>  
   <view class="cu-item text-green">
     <view class="bg-green content shadow">
       <view class="cu-capsule radius">

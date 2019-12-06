@@ -1,4 +1,4 @@
-<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
   <view slot="backText">返回</view>
   <view slot="content">银行卡</view>
 </cu-custom>
@@ -6,7 +6,7 @@
 <form bindsubmit="formSubmit" bindreset="formReset">
   <view class="cu-form-group margin-top">
     <view class="title">卡号</view>
-    <input name="id" placeholder="请输入拾到卡上的卡号"></input>
+    <input name="id" focus="true" placeholder="请输入拾到卡上的卡号"></input>
   </view>
   <view class="cu-form-group">
     <view class="title">所属银行</view>
@@ -23,7 +23,7 @@
 
 
 <view class="padding flex flex-direction">
-  <button form-type="submit" bindtap="onAdd" class="cu-btn bg-green lg">提交</button>
+  <button form-type="submit" class="cu-btn bg-blue lg">提交</button>
 </view>
 
 </form>

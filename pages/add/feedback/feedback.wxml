@@ -1,48 +1,47 @@
-<cu-custom bgColor="bg-green" isBack="{{true}}">
+<cu-custom bgColor="bg-green" >
   <view slot="backText">返回</view>
   <view slot="content"></view>
 </cu-custom>
 <view class="page">
-    <view class="weui-msg">
-        <view class="weui-msg__icon-area">
-            <icon type="success" size="93"></icon>
-        </view>
-        <view class="weui-msg__text-area">
-            <view class="weui-msg__title">提交成功</view>
-            <view class="weui-msg__desc"wx:if="{{num}}">共提交{{num}}条数据，</view>
-            <view class="weui-msg__desc">“ 科大有你更美好！”</view>
-        </view>
-        <view class="weui-msg__opr-area">
-            <view class="weui-btn-area">
-            <navigator url='/pages/index/index'>
-                <button class="weui-btn" type="primary">返回主页面</button>
-              </navigator>
-                <!-- <button  class="weui-btn" type="default" bindtap="getData">导出提交数据</button>    -->
-            </view>
-          
-<!-- 
-          <view wx:if="{{uploadData}}" bindtap="CopyLink">
-              <view>
-              安全信息队失物招领
-              </view>
-              <view wx:for="{{uploadData}}">
-                姓名 : {{item.losterName}} 
-                学号 : {{item.id}}
-               </view>
-               <view>
-               请失主尽快携带有效证件到安全信息队一中队办公室(第一教学楼东侧南校心理健康中心楼下)领取，请相互转告，谢谢！  
-               </view>
-            
-          </view> -->
-
-        </view>
-        <view class="weui-msg__extra-area">
-            <view class="weui-footer">
-                <view class="weui-footer__links">
-                    <!-- <navigator url="" class="weui-footer__link">底部链接文本</navigator> -->
-                </view>
-                <view class="weui-footer__text">Copyright © {{year}} 布丁科技</view>
-            </view>
-        </view>
+  <view class="weui-msg">
+    <view class="weui-msg__icon-area">
+      <icon type="success" size="93"></icon>
     </view>
+    <view class="weui-msg__text-area">
+      <view class="weui-msg__title">提交成功</view>
+      <view class="weui-msg__desc" wx:if="{{num}}">共提交{{num}}条数据，</view>
+      <view class="weui-msg__desc" wx:if="{{!register}}">“ 科大有你更美好！”</view>
+      <view class="weui-msg__desc" wx:if="{{register}}">你所登记的信息已经提交到了数据中心，当有同学拾到你的物品时，我们将第一时间向你取得联系，请耐心等待!</view>
+    </view>
+    <view class="weui-msg__opr-area">
+      <view class="weui-btn-area">
+        
+          <button class="weui-btn" type="primary" bindtap="navigate">返回主页面</button>
+        
+        <button wx:if="{{item}}" class="weui-btn" type="default" bindtap="getData">导出数据(长按下列文本复制)</button>
+      </view>
+
+
+      <view wx:if="{{uploadData}}">
+      
+        <view class="dataBox">
+          <text selectable="true">安全信息队失物招领\n</text>
+          <text selectable="true">物品：校园卡\n</text>
+          <div class="main">
+          <text selectable="true" wx:for="{{uploadData}}" wx:key="key"> 姓名 : {{item.losterName}}\n 学号 : {{item.id}}\n</text>
+          </div>
+          <text wx:if="{{location==1}}" selectable="true">请失主尽快携带有效证件到安全信息队一中队办公室(第一教学楼东侧南校心理健康中心楼下)领取，请相互转告，谢谢！</text>
+           <text wx:if="{{location==2}}" selectable="true">请失主尽快携带有效证件到学生安全信息队二中队办公室（北校校医院前的保卫处大院）领取，请相互转告，谢谢！</text>
+        </view>
+      </view>
+    </view>
+    <view class="weui-msg__extra-area">
+      <view class="weui-footer">
+        <view class="weui-footer__links">
+          <!-- <navigator url="" class="weui-footer__link">底部链接文本</navigator> -->
+        </view>
+        <view class="weui-footer__text">Copyright © {{year}} 布丁科技</view>
+      </view>
+    </view>
+  </view>
 </view>

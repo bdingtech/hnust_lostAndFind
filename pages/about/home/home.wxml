@@ -3,12 +3,12 @@
   <view class="UCenter-bg">
     <image src="/images/logo.png" class="png" mode="widthFix"></image>
     <view class="text-xl">湖科大失物招领
-      <text class="text-df">v1.0</text>
+      <text class="text-df">v2.0</text>
     </view>
     <view class="margin-top-sm">
       <text>By:pudding</text>
     </view>
-    <image src="https://image.weilanwl.com/gif/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+    <image src="https://bdimges.oss-cn-shenzhen.aliyuncs.com/miniProgram/wave.gif" mode="scaleToFill" class="gif-wave"></image>
   </view>
   <!-- <view class="padding flex text-center text-grey bg-white shadow-warp">
     <view class="flex flex-sub flex-direction solid-right">
@@ -48,7 +48,7 @@
       </view>
     </view>
     <view class="cu-item arrow">
-      <button class="cu-btn content" open-type="feedback">
+      <button class="cu-btn content" bindtap="bug">
         <text class="cuIcon-writefill text-cyan"></text>
         <text class="text-grey">意见反馈</text>
       </button>

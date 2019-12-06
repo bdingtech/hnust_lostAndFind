@@ -27,7 +27,7 @@ Page({
       name: '湖南科技大学学生安全信息队二中队'
     }]
   },
-  inputBind: function (event) {
+  inputBind: function(event) {
     this.setData({
       inputValue: event.detail.value
     })
@@ -35,10 +35,10 @@ Page({
 
   },
   //拨打电话
-  calling: function () {
+  calling: function() {
     wx.makePhoneCall({
       phoneNumber: this.data.tel,
-      success: function () {
+      success: function() {
         console.log('拨打电话成功')
       }
     })
@@ -52,7 +52,7 @@ Page({
   //   }
   // },
 
-  onQuery: function () {
+  onQuery: function() {
     var that = this;
     if (this.data.inputValue.length == 0) {
       console.log("输入数据为空");
@@ -72,14 +72,14 @@ Page({
         url: config.query,
         data: {
           id: this.data.inputValue,
-          item: 'id_card'
+          item: 'stu_card'
         },
         header: {
           'content-type': 'application/json' // 默认值
         },
         success(res) {
           // console.log(res.data[0])
-          console.log(res)
+          //console.log(res)
           wx.hideLoading();
           if (!res.data.length)
           //没有找到数据，length值为0
@@ -94,7 +94,7 @@ Page({
               content: '数据库中暂未找到你提交的数据，请检查是否输入错误，若输入无误，你可以选择前往填写登记信息',
               confirmText: "前往登记",
               cancelText: "取消",
-              success: function (res) {
+              success: function(res) {
                 console.log(res);
                 if (res.confirm) {
                   wx.navigateTo({

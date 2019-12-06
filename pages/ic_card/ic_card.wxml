@@ -47,7 +47,7 @@
                 </view>
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">提交时间</view>
-                    <view class="weui-form-preview__value">{{due}}</view>
+                    <view class="weui-form-preview__value">{{time}}</view>
                 </view>
             </view>
             <view class="weui-form-preview__ft" bindtap="calling">
@@ -81,7 +81,7 @@
                 </view> -->
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">提交时间</view>
-                    <view class="weui-form-preview__value">{{due}}</view>
+                    <view class="weui-form-preview__value">{{time}}</view>
                 </view>
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">取回地点</view>
@@ -141,10 +141,10 @@
 <!-- <view class="search_result">
 <text class="search_result" wx:if="{{queryResult}}">
       姓名:{{losterName}}
-      学号:{{id}}
+      学号:{{itime}}
       拾到者姓名：{{finderName}}
       拾到者联系方式：{{tel}}
-      提交时间:{{due}}
+      提交时间:{{time}}
 </text>
 </view> -->
 <!-- 搜索结果展示 -->

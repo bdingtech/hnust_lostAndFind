@@ -6,14 +6,26 @@
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"coverView": true,
+		"nodeModules": false,
+		"autoAudits": true,
+		"uglifyFileName": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.5",
-	"appid": "wxc5b95cab32de9877",
+	"libVersion": "2.8.2",
+	"appid": "wx6910e81f07482f58",
 	"projectname": "%E6%B9%96%E7%A7%91%E5%A4%A7%E5%A4%B1%E7%89%A9%E6%8B%9B%E9%A2%86",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -39,13 +51,13 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 17,
 			"list": [
 				{
 					"id": 0,
 					"name": "校园卡",
 					"pathName": "pages/ic_card/ic_card",
-					"query": "",
+					"query": "queryResult=true",
 					"scene": null
 				},
 				{
@@ -91,7 +103,7 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 7,
 					"name": "xxd-校园卡",
 					"pathName": "pages/add/xxd/ic_card/ic_card",
 					"query": "",
@@ -122,6 +134,49 @@
 					"id": -1,
 					"name": "xxd-银行卡",
 					"pathName": "pages/add/xxd/credit_card/credit_card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "登记卡",
+					"pathName": "pages/register/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "学生证",
+					"pathName": "pages/add/stu_card/stu_card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "xxd-学生证",
+					"pathName": "pages/add/xxd/stu_card/stu_card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "银行卡添加页面",
+					"pathName": "pages/add/credit_card/credit_card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "学生证添加页面",
+					"pathName": "pages/add/stu_card/stu_card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "失物广场",
+					"pathName": "pages/square/square",
+					"query": "",
 					"scene": null
 				}
 			]

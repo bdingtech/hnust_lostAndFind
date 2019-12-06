@@ -1,6 +1,6 @@
   <cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
     <view slot="backText">返回</view>
-    <view slot="content">身份证</view>
+    <view slot="content">学生证</view>
   </cu-custom>
   <!-- 标题 -->
 
@@ -12,7 +12,7 @@
 <!-- 表单 -->
   <form>
   <!-- 记得设置name值，这样JS才能接收name=keyword的值 -->
-    <input focus="true" type="idcard" value="{{inputValue}}" bindinput="inputBind" name="keyword" class="search_input" placeholder='请输入你的身份证号码'/>
+    <input focus="true" type="number" value="{{inputValue}}" bindinput="inputBind" name="keyword" class="search_input" placeholder='请输入你的学号'/>
 
     <button class="weui-btn"  bindtap="onQuery" type="primary">搜索</button>
     <!-- <button formType="submit" bindtap="onQuery" class="search_btn">搜索</button>     -->
@@ -27,16 +27,16 @@
                     <view class="weui-form-preview__label">姓名</view>
                     <view class="weui-form-preview__value_in-hd">{{losterName}}</view>
                 </view>
-                <!-- <view class="weui-form-preview__item">
+                <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">学号</view>
                     <view class="weui-form-preview__value_in-hd">{{id}}</view>
-                </view> -->
+                </view>
             </view>
             <view class="weui-form-preview__bd">
-                <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">证件号码</view>
+                <!-- <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">学号</view>
                     <view class="weui-form-preview__value">{{id}}</view>
-                </view>
+                </view> -->
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">拾到者称呼</view>
                     <view class="weui-form-preview__value">{{finderName}}</view>
@@ -65,16 +65,16 @@
                     <view class="weui-form-preview__label">姓名</view>
                     <view class="weui-form-preview__value_in-hd">{{losterName}}</view>
                 </view>
-                <!-- <view class="weui-form-preview__item">
+                <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">学号</view>
                     <view class="weui-form-preview__value_in-hd">{{id}}</view>
-                </view> -->
+                </view>
             </view>
             <view class="weui-form-preview__bd">
-                <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">证件号码</view>
+                <!-- <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">学号</view>
                     <view class="weui-form-preview__value">{{id}}</view>
-                </view>
+                </view> -->
                 <!-- <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">联系方式</view>
                     <view class="weui-form-preview__value">{{tel}}</view>

@@ -1,5 +1,6 @@
 wx.cloud.init()
 const app = getApp()
+var config = (wx.getStorageSync("config"));
 Page({
   data: {
     // openid: '',
@@ -9,7 +10,7 @@ Page({
     id: '',
     finderName: '',
     tel: '',
-    due: '',
+    time: '',
     empty: '',
     xdd: '',
     location: '',
@@ -52,6 +53,7 @@ Page({
   // },
 
   onQuery: function () {
+    var that = this;
     if (this.data.inputValue.length == 0) {
       console.log("输入数据为空");
       wx.showModal({
@@ -65,59 +67,149 @@ Page({
         title: '搜索中...',
         icon: 'loading'
       })
-      const db = wx.cloud.database()
-      db.collection('credit_card').where({
-        id: this.data.inputValue
-      }).get({
-        success: res => {
+
+      wx.request({
+        url: config.query,
+        data: {
+          id: this.data.inputValue,
+          item: 'credit_card'
+        },
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success(res) {
+          // console.log(res.data[0])
+          //console.log(res)
           wx.hideLoading();
-          //判断是否查找到数据
-          if (!res.data.length) {
-            this.setData({
+          if (!res.data.length)
+          //没有找到数据，length值为0
+          {
+            that.setData({
               empty: true,
               queryResult: false,
               xxd: false
             })
             wx.showModal({
-              title: '温馨提示！',
-              content: '数据库中暂未找到你提交的数据，请耐心等待',
-            })
+              title: '温馨提示',
+              content: '数据库中暂未找到你提交的数据，请检查是否输入错误，若输入无误，你可以选择前往填写登记信息',
+              confirmText: "前往登记",
+              cancelText: "取消",
+              success: function (res) {
+                console.log(res);
+                if (res.confirm) {
+                  wx.navigateTo({
+                    url: '/pages/register/register',
+                  })
+                } else {
+                  console.log('用户点击辅助操作')
+                }
+              }
+            });
             console.log('[数据库] [查询记录] 失败: ', res)
           }
           //判断是否为信息队提交
           else {
             console.log("找到数据了");
             if (res.data[0].xxd) {
-              this.setData({
+              that.setData({
                 xxd: true,
                 queryResult: false,
                 empty: false,
-                losterName: res.data[0].losterName,
+                bank: res.data[0].bank,
                 id: res.data[0].id,
-                finderName: res.data[0].finderName,
-                tel: res.data[0].tel,
-                due: res.data[0].due,
+                // finderName: res.data[0].finderName,
+                // tel: res.data[0].tel,
+                time: res.data[0].time,
                 location: res.data[0].location
               })
               console.log("信息队提交", res);
               console.log(this.data.location)
             } else {
               console.log("个人提交");
-              this.setData({
+              that.setData({
                 queryResult: true,
                 empty: false,
                 xxd: false,
-                losterName: res.data[0].losterName,
+                bank: res.data[0].bank,
                 id: res.data[0].id,
                 finderName: res.data[0].finderName,
                 tel: res.data[0].tel,
-                due: res.data[0].due,
+                time: res.data[0].time,
               })
               console.log('[数据库] [查询记录] 成功: ', res)
             }
           }
         }
       })
+
+
+
+      // const db = wx.cloud.database()
+      // db.collection('ic_card').where({
+      //   id: this.data.inputValue
+      // }).get({
+      //   success: res => {
+      //     wx.hideLoading();
+      //     //判断是否查找到数据
+      //     if(!res.data[0].length)
+      //     {
+      //       this.setData({
+      //         empty: true,
+      //         queryResult: false,
+      //         xxd:false
+      //       })
+      //       wx.showModal({
+      //         title: '温馨提示',
+      //         content: '数据库中暂未找到你提交的数据，请检查是否输入错误，若输入无误，你可以选择前往填写登记信息',
+      //         confirmText: "前往登记",
+      //         cancelText: "取消",
+      //         success: function (res) {
+      //           console.log(res);
+      //           if (res.confirm) {
+      //             wx.navigateTo({
+      //               url: '/pages/register/register',
+      //             })
+      //           } else {
+      //             console.log('用户点击辅助操作')
+      //           }
+      //         }
+      //       });
+      //       console.log('[数据库] [查询记录] 失败: ', res)
+      //     }
+      //     //判断是否为信息队提交
+      //     else {
+      //       console.log("找到数据了");
+      //     if(res.data[0].xxd){
+      //       this.setData({
+      //         xxd:true,
+      //         queryResult:false,
+      //         empty:false,
+      //         losterName: res.data[0].losterName,
+      //         id: res.data[0].id,
+      //         // finderName: res.data[0].finderName,
+      //         // tel: res.data[0].tel,
+      //         time: res.data[0].time,
+      //         location:res.data[0].location
+      //       })
+      //       console.log("信息队提交",res);
+      //       console.log(this.data.location)
+      //     }else{
+      //           console.log("个人提交");
+      //           this.setData({
+      //             queryResult: true,
+      //             empty: false,
+      //             xxd: false,
+      //             losterName: res.data[0].losterName,
+      //             id: res.data[0].id,
+      //             finderName: res.data[0].finderName,
+      //             tel: res.data[0].tel,
+      //             time: res.data[0].time,
+      //           })
+      //           console.log('[数据库] [查询记录] 成功: ', res)
+      //         }
+      //       }
+      //     }
+      // })
     }
   }
 })

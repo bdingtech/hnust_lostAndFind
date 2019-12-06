@@ -1,6 +1,8 @@
 //app.js
+var config = require("./config.js");
 App({
   onLaunch: function () {
+    wx.setStorageSync("config", config);
     wx.getSystemInfo({
       success: e => {
         this.globalData.StatusBar = e.statusBarHeight;

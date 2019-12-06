@@ -1,4 +1,5 @@
 const app = getApp()
+var config = (wx.getStorageSync("config"));
 Page({
   data: {
     id: '',
@@ -6,12 +7,12 @@ Page({
     xxd: '',
     isSelect1: '',
     isSelect2: '',
-    times: '1',  //已废弃
-    num: '' , //提交个数
-    bank:''
+    times: '1', //已废弃
+    num: '', //提交个数
+    bank: ''
   },
   //结束提交数据
-  endSubmit: function () {
+  endSubmit: function() {
     var that = this
     //判断用户是否未提交过数据就结束提交
     if (this.data.times.length - 1 == 0) {
@@ -37,7 +38,7 @@ Page({
     }
   },
   //小程序启动时接收location数据
-  onLoad: function (options) {
+  onLoad: function(options) {
     //console.log(options)
     if (options.isSelect == 1) {
       this.setData({
@@ -63,7 +64,7 @@ Page({
     console.log(this.data.num)
   },
   //点击事件
-  radioChange: function (e) {
+  radioChange: function(e) {
     //console.log('radio发生change事件，携带value值为：', e.detail.value);
     this.setData({
       location: e.detail.value
@@ -71,26 +72,37 @@ Page({
   },
   //获取当前时间函数
   getTime: function () {
-    var myDate = new Date();
-    var year = myDate.getFullYear();    //获取完整的年份(4位,1970-????)
-    var month = myDate.getMonth() + 1;       //获取当前月份(1-12)
-    var day = myDate.getDate();        //获取当前日(1-31)
-    var hours = myDate.getHours();
-    var minutes = myDate.getMinutes();
+    var nowYear = new Date().getFullYear().toString()
+    var nowMonth = (new Date().getMonth() + 1).toString()
+    var nowDay = new Date().getDate().toString();
+    var nowHours = new Date().getHours().toString();       //获取当前小时数(0-23)
+    var nowMin = new Date().getMinutes().toString();     //获取当前分钟数(0-59)
+    var nowSeconds = new Date().getSeconds().toString();     //获取当前秒数(0-59)
+    function timeAdd0(str) {
+      if (str.length <= 1) {
+        str = '0' + str;
+      }
+      return str
+    }
+    nowYear = timeAdd0(nowYear)
+    nowMonth = timeAdd0(nowMonth)
+    nowDay = timeAdd0(nowDay)
+    nowHours = timeAdd0(nowHours)
+    nowMin = timeAdd0(nowMin)
+    nowSeconds = timeAdd0(nowSeconds)
+    //console.log(nowYear + nowMonth + nowDay + nowHours + nowMin + nowSeconds)
     //获取完整年月日
-    var newDay = year + "/" + month + "/" + day + "  " + hours + ":" + minutes;
+    var newDay = nowYear + "/" + nowMonth + "/" + nowDay + "  " + nowHours + ":" + nowMin + ":" + nowSeconds;
+    console.log(newDay)
     return newDay;
   },
   //表单提交数据处理
-  formSubmit: function (e) {
+  formSubmit: function(e) {
     console.log('form发生了submit事件：', e.detail.value)
     this.setData({
       bank: e.detail.value.bank,
       id: e.detail.value.id,
     })
-  },
-  //数据库操作
-  onAdd: function () {
     var that = this;
     //计数
     this.setData({
@@ -108,50 +120,97 @@ Page({
       wx.showLoading({
         title: '正在提交...',
       })
-      const db = wx.cloud.database()
-      db.collection('credit_card').add({
+      wx.request({
+        url: config.xxd,
         data: {
           bank: this.data.bank,
-          due: this.getTime(),
-          // 地理位置（113°E，23°N）
-          //location: new db.Geo.Point(113, 23),
+          time: this.getTime(),
           id: this.data.id,
+          xxd: 1,
           location: this.data.location,
-          xxd: true,
-          done: false
+          //finderName: this.data.finderName,
+          //tel: this.data.tel,
+          done: false,
+          item: 'credit_card'
         },
-        success: function (res) {
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success(res) {
+          // console.log(res.data)
           wx.hideLoading()
           wx.showToast({
             title: '提交成功',
             icon: 'success',
             duration: 1000,
             success: function () {
+              console.log(res)
               setTimeout(function () {
                 //缓存提交数据到本地，以便于后期导出
-                wx.setStorage({
-                  key: that.data.num.toString(),
-                  data: {
-                    bank: that.data.bank,
-                    id: that.data.id
-                  },
-                })
+                // wx.setStorage({
+                //   key: that.data.count.toString(),
+                //   data: {
+                //     bank: that.data.bank,
+                //     id: that.data.id
+                //   },
+                // })
                 wx.navigateTo({
-                  url: '/pages/add/xxd/ic_card/ic_card?isSelect=' + that.data.location + "&times=" + that.data.times,
-                })
-              }, 2000);
+                  url: '/pages/add/xxd/credit_card/credit_card?isSelect=' + that.data.location + "&times=" + that.data.times,
+                  fail: function (res) {
+                    console.log("开始调用wx.redirect")
+                    wx.redirectTo({
+                      url: '/pages/add/xxd/credit_card/credit_card?isSelect=' + that.data.location + "&times=" + that.data.times,
+                    })
+                  },
+                }, 1000)
+              })
             }
-          });
-
-          // wx.redirectTo({
-          //   url: '/pages/add/xxd/ic_card/ic_card',
-          //   // url: '/pages/add/feedback/feedback',
-          // })
-          // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
-
-        },
-        fail: console.error
+          })
+          console.log(res)
+        }
       })
+      // const db = wx.cloud.database()
+      // db.collection('credit_card').add({
+      //   data: {
+      //     bank: this.data.bank,
+      //     due: this.getTime(),
+      //     // 地理位置（113°E，23°N）
+      //     //location: new db.Geo.Point(113, 23),
+      //     id: this.data.id,
+      //     location: this.data.location,
+      //     xxd: true,
+      //     done: false
+      //   },
+      //   success: function(res) {
+      //     wx.hideLoading()
+      //     wx.showToast({
+      //       title: '提交成功',
+      //       icon: 'success',
+      //       duration: 1000,
+      //       success: function() {
+      //         setTimeout(function () {
+      //           wx.navigateTo({
+      //             url: '/pages/add/xxd/credit_card/credit_card?isSelect=' + that.data.location + "&times=" + that.data.times,
+      //             fail: function (res) {
+      //               console.log("开始调用wx.redirect")
+      //               wx.redirectTo({
+      //                 url: '/pages/add/xxd/credit_card/credit_card?isSelect=' + that.data.location + "&times=" + that.data.times,
+      //               })
+      //             },
+      //           }, 1000)
+      //         })
+      //       }
+      //     });
+
+      //     // wx.redirectTo({
+      //     //   url: '/pages/add/xxd/ic_card/ic_card',
+      //     //   // url: '/pages/add/feedback/feedback',
+      //     // })
+      //     // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+
+      //   },
+      //   fail: console.error
+      // })
     }
   }
 })

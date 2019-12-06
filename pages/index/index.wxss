@@ -86,3 +86,15 @@
 .waveAnimation .waveBottom {
   animation: move_wave 12s linear infinite;
 }
+
+.swiper_container {
+  height: 45rpx;
+  width: 100%;
+}
+.swiper_item {
+  font-size: 30rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

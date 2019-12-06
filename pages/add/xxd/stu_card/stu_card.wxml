@@ -1,18 +1,17 @@
-<cu-custom bgColor="bg-cyan" >
-  <view slot="content">校园卡</view>
+<cu-custom bgColor="bg-cyan">
+  <view slot="content">学生证</view>
 </cu-custom>
-
 
 <view class="weui-cells__title">请填写基本信息</view>
 <form bindsubmit="formSubmit" bindreset="formReset">
   <view class="cu-form-group margin-top">
     <view class="title">失主姓名</view>
-    <input focus="true" name="losterName"  placeholder="请输入拾到卡上的姓名"></input>
+    <input focus="true" name="losterName"  placeholder="请输入学生证上的姓名"></input>
 
   </view>
     <view class="cu-form-group">
-    <view class="title">卡号</view>
-    <input type="number" name="id" placeholder="请输入拾到校园卡上的学号"></input>
+    <view class="title">学号</view>
+    <input type="number" name="id" placeholder="请输入拾到学生证上的学号"></input>
   </view>
    <view class="weui-cells__title">请选择所在中队办公室</view>
    	<radio-group bindchange="radioChange" class="block">

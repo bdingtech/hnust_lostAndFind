@@ -74,5 +74,11 @@ Component({
         current: 'https://bdimges.oss-cn-shenzhen.aliyuncs.com/miniProgram/zanCode.jpg' // 当前显示图片的http链接      
       })
     },
+    bug() {
+      wx.previewImage({
+        urls: ['https://bdimges.oss-cn-shenzhen.aliyuncs.com/miniProgram/mmqrcode1575183174504.png'],
+        current: 'https://bdimges.oss-cn-shenzhen.aliyuncs.com/miniProgram/mmqrcode1575183174504.png' // 当前显示图片的http链接      
+      })
+    },
   }
 })

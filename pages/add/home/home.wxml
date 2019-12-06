@@ -1,5 +1,5 @@
 <scroll-view scroll-y class="scrollPage">
-  <cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg">
+  <cu-custom bgImage="https://bdimges.oss-cn-shenzhen.aliyuncs.com/miniProgram/cjkz2329.jpg">
     <view slot="content">
       请选择你拾到的物品
     </view>

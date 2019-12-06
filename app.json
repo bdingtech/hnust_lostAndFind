@@ -1,20 +1,25 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/register/register",
     "pages/ic_card/ic_card",
     "pages/id_card/id_card",
+    "pages/stu_card/stu_card",
     "pages/credit_card/credit_card",
+    "pages/square/square",
     "pages/more/more",
     "pages/logs/logs",
     "pages/about/home/home",
     "pages/add/ic_card/ic_card",
     "pages/add/id_card/id_card",
+    "pages/add/stu_card/stu_card",
     "pages/add/credit_card/credit_card",
     "pages/add/feedback/feedback",
     "pages/add/home/home",
     "pages/add/xxd/home/home",
     "pages/add/xxd/ic_card/ic_card",
     "pages/add/xxd/id_card/id_card",
+    "pages/add/xxd/stu_card/stu_card",
     "pages/add/xxd/credit_card/credit_card"
   ],
   "window": {

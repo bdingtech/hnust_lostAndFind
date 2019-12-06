@@ -1,5 +1,4 @@
-<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
-  <view slot="backText">返回</view>
+<cu-custom bgColor="bg-cyan" >
   <view slot="content">银行卡</view>
 </cu-custom>
 
@@ -28,7 +27,7 @@
 
 
 <view class="padding flex flex-direction">
-  <button form-type="submit" bindtap="onAdd" class="cu-btn bg-green lg">提交</button>
+  <button form-type="submit" class="cu-btn bg-cyan lg">提交</button>
 
   <button  bindtap="endSubmit" class="cu-btn  lg">结束提交</button>
  

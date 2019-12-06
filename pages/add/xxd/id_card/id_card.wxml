@@ -1,5 +1,4 @@
-<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
-  <view slot="backText">返回</view>
+<cu-custom bgColor="bg-cyan">
   <view slot="content">身份证</view>
 </cu-custom>
 
@@ -12,7 +11,7 @@
   </view>
     <view class="cu-form-group">
     <view class="title">证件号码</view>
-    <input type="number" name="id" placeholder="请输入失主的身份证号码"></input>
+    <input type="idcard" name="id" placeholder="请输入失主的身份证号码"></input>
   </view>
    <view class="weui-cells__title">请选择所在中队办公室</view>
    	<radio-group bindchange="radioChange" class="block">
@@ -28,7 +27,7 @@
 
 
 <view class="padding flex flex-direction">
-  <button form-type="submit" bindtap="onAdd" class="cu-btn bg-green lg">提交</button>
+  <button form-type="submit" class="cu-btn bg-cyan lg">提交</button>
 
   <button  bindtap="endSubmit" class="cu-btn  lg">结束提交</button>
  

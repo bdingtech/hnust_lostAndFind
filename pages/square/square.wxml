@@ -1,0 +1,72 @@
+<cu-custom bgColor="bg-green" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">失物广场</view>
+</cu-custom>
+<scroll-view scroll-x class="bg-white nav text-center">
+    <view class="cu-item {{0==TabCur?'text-green cur':''}}" bindtap="tabSelect" data-id="0">
+        <text class="icon-explorefill"></text> 寻找失物
+    </view>
+    <view class="cu-item {{2==TabCur?'text-green cur':''}}">
+        <text class="icon-titles"></text>
+    </view>
+    <view class="cu-item {{1==TabCur?'text-green cur':''}}" bindtap="tabSelect" data-id="1">
+        <text class="icon-peoplefill"></text> 寻找失主
+    </view>
+    <!-- <view class="cu-item {{2==TabCur?'text-green cur':''}}" bindtap="tabSelect" data-id="2">
+    <text class="icon-clothesfill"></text> 皮肤
+  </view> -->
+</scroll-view>
+<!-- <view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <image src='/images/logo.png' class='png' mode='aspectFit'></image>
+  <view class='gray-text'>加载中...</view>
+</view> -->
+
+<!-- <view class="cu-list menu-avatar margin-top">
+    <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url(https://bdimges.oss-cn-shenzhen.aliyuncs.com/miniProgram/xxd.jpg);"></view>
+        <view class="content">
+            <view class="text-black">信息队失物招领发布
+                <view class="cu-tag round bg-blue sm">官方</view>
+            </view>
+            <view class="text-gray text-sm flex">
+                <text class="text-blue">物品：校园卡</text>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+<view class="cu-item ">
+    <view class="cu-list menu sm-border ">
+        <view class="cu-item ">
+            <view class="content">
+                <text class="icon-my text-grey"></text>
+                <text class="text-my padding">姓名：赵信</text>
+                <text class="icon-right "></text>
+                <text class="text-my  text-right">学号：1855010426</text>
+            </view>
+        </view>
+    </view>
+</view>
+ -->
+
+<view class="cu-card article" >
+    <view class="cu-item shadow">
+        <view class="title">
+            <view class="text-cut">姓名：赵信</view>
+            <view class="toTop">学号：1855010426</view>
+        </view>
+        <view class="content">
+            <view class="desc">
+                <view>
+                    <text class="icon-tagfill text-red"></text>
+                    <view class="cu-tag bg-red light sm round">校园卡</view>
+                    <view class="cu-tag bg-green light sm round">信息队发布</view>
+                    <view class="cu-tag bg-blue light sm round">2019/09/29 19:08:24</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+

@@ -3,3 +3,14 @@
 page{
     background-color: #FFFFFF;
 }
+.dataBox{
+  width: 90%;
+  text-align: left;
+  padding: 20px;
+  margin: 20px auto;
+  margin-bottom: 50px;
+  border: 1px solid rgb(226, 226, 226);
+  /* line-height: 30rpx; */
+  /* font-size: 20rpx; */
+  /* background-color: #F5F5F5 */
+}

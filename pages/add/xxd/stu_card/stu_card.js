@@ -144,7 +144,7 @@ Page({
           //finderName: this.data.finderName,
           //tel: this.data.tel,
           done: false,
-          item:'id_card'
+          item:'stu_card'
         },
         header: {
           'content-type': 'application/json' // 默认值
@@ -168,11 +168,11 @@ Page({
                   },
                 })
                 wx.navigateTo({
-                  url: '/pages/add/xxd/id_card/id_card?isSelect=' + that.data.location + "&times=" + that.data.times,
+                  url: '/pages/add/xxd/stu_card/stu_card?isSelect=' + that.data.location + "&times=" + that.data.times,
                   fail: function (res) {
                     console.log("开始调用wx.redirect")
                     wx.redirectTo({
-                      url: '/pages/add/xxd/id_card/id_card?isSelect=' + that.data.location + "&times=" + that.data.times,
+                      url: '/pages/add/xxd/stu_card/stu_card?isSelect=' + that.data.location + "&times=" + that.data.times,
                     })
                   },
                 }, 1000)
@@ -185,7 +185,7 @@ Page({
 
 
       // const db = wx.cloud.database()
-      // db.collection('id_card').add({
+      // db.collection('stu_card').add({
       //   data: {
       //     losterName: this.data.losterName,
       //     due: this.getTime(),
@@ -214,7 +214,7 @@ Page({
       //         //   //   },
       //         //   // })
       //         //   wx.redirectTo({
-      //         //     url: '/pages/add/xxd/id_card/id_card?isSelect=' + that.data.location + "&times=" + that.data.times,
+      //         //     url: '/pages/add/xxd/stu_card/stu_card?isSelect=' + that.data.location + "&times=" + that.data.times,
       //         //   })
       //         // }, 1000);
       //         setTimeout(function(){
@@ -227,11 +227,11 @@ Page({
       //             },
       //           })
       //           wx.navigateTo({
-      //             url: '/pages/add/xxd/id_card/id_card?isSelect=' + that.data.location + "&times=" + that.data.times,
+      //             url: '/pages/add/xxd/stu_card/stu_card?isSelect=' + that.data.location + "&times=" + that.data.times,
       //             fail: function(res) {
       //               console.log("开始调用wx.redirect")
       //               wx.redirectTo({
-      //               url: '/pages/add/xxd/id_card/id_card?isSelect=' + that.data.location + "&times=" + that.data.times,
+      //               url: '/pages/add/xxd/stu_card/stu_card?isSelect=' + that.data.location + "&times=" + that.data.times,
       //             })},
       //           },1000)
       //         })

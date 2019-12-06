@@ -1,4 +1,4 @@
-<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
   <view slot="backText">返回</view>
   <view slot="content">校园卡</view>
 </cu-custom>
@@ -6,12 +6,12 @@
 <form bindsubmit="formSubmit" bindreset="formReset">
   <view class="cu-form-group margin-top">
     <view class="title">失主姓名</view>
-    <input name="losterName" placeholder="请输入拾到卡上的姓名"></input>
+    <input focus="true" name="losterName" placeholder="请输入拾到卡上的姓名"></input>
 
   </view>
   <view class="cu-form-group">
     <view class="title">卡号</view>
-    <input type="number" name="id" placeholder="请输入拾到校园卡的卡号"></input>
+    <input type="number" name="id" placeholder="请输入拾到校园卡上的学号"></input>
   </view>
 
   <view class="cu-form-group margin-top">
@@ -25,6 +25,6 @@
   </view>
 
   <view class="padding flex flex-direction">
-    <button form-type="submit" class="cu-btn bg-green lg">提交</button>
+    <button form-type="submit" class="cu-btn bg-blue lg">提交</button>
   </view>
 </form>

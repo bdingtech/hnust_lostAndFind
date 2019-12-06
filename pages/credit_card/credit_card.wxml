@@ -23,10 +23,10 @@
     <view class="page__bd" wx:if="{{queryResult}}">
         <view class="weui-form-preview">
             <view class="weui-form-preview__hd">
-                <!-- <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">姓名</view>
-                    <view class="weui-form-preview__value_in-hd">{{losterName}}</view>
-                </view> -->
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">所属银行</view>
+                    <view class="weui-form-preview__value_in-hd">{{bank}}</view>
+                </view>
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">银行卡号</view>
                     <view class="weui-form-preview__value_in-hd">{{id}}</view>
@@ -47,7 +47,7 @@
                 </view>
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">提交时间</view>
-                    <view class="weui-form-preview__value">{{due}}</view>
+                    <view class="weui-form-preview__value">{{time}}</view>
                 </view>
             </view>
             <view class="weui-form-preview__ft" bindtap="calling">
@@ -62,11 +62,11 @@
         <view class="weui-form-preview">
             <view class="weui-form-preview__hd">
                 <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">姓名</view>
-                    <view class="weui-form-preview__value_in-hd">{{losterName}}</view>
+                    <view class="weui-form-preview__label">所属银行</view>
+                    <view class="weui-form-preview__value_in-hd">{{bank}}</view>
                 </view>
                 <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">学号</view>
+                    <view class="weui-form-preview__label">银行卡号</view>
                     <view class="weui-form-preview__value_in-hd">{{id}}</view>
                 </view>
             </view>
@@ -81,7 +81,7 @@
                 </view> -->
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">提交时间</view>
-                    <view class="weui-form-preview__value">{{due}}</view>
+                    <view class="weui-form-preview__value">{{time}}</view>
                 </view>
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">取回地点</view>
@@ -144,7 +144,7 @@
       学号:{{id}}
       拾到者姓名：{{finderName}}
       拾到者联系方式：{{tel}}
-      提交时间:{{due}}
+      提交时间:{{time}}
 </text>
 </view> -->
 <!-- 搜索结果展示 -->

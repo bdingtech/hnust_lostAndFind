@@ -21,11 +21,11 @@ Component({
         img: 'https://bdimges.oss-cn-shenzhen.aliyuncs.com/miniProgram/qpct2148.jpg',
         url: '/pages/add/credit_card/credit_card'
       },
-      // {
-      //   title: '学生证',
-      //   img: 'https://bdimges.oss-cn-shenzhen.aliyuncs.com/miniProgram/qpczdh2307.jpg',
-      //   url: '/pages/add/credit_card/credit_card'
-      // }
+      {
+        title: '学生证',
+        img: 'https://bdimges.oss-cn-shenzhen.aliyuncs.com/miniProgram/qpczdh2307.jpg',
+        url: '/pages/add/stu_card/stu_card'
+      }
     ]
   },
   methods: {

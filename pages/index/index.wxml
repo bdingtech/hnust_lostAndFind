@@ -15,6 +15,17 @@
       <view class="wave waveBottom" style="background-image:url('https://bdimges.oss-cn-shenzhen.aliyuncs.com/miniProgram/wave-bot.png')"></view>
     </view>
   </view>
+<!-- <view class="center">已帮助3412人找回离家出走的校园卡、身份证等物品</view> -->
+
+    <!-- <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="5000">
+      <block wx:for="{{msgList}}" wx:key="">
+        
+          <swiper-item>
+            <view class="swiper_item">{{item.title}}</view>
+          </swiper-item>
+       
+      </block>
+    </swiper> -->
 
   <view class="nav-list">
     <navigator open-type="navigate" hover-class='none' url="/pages/{{item.nicname}}/{{item.nicname}}" class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key>
@@ -23,11 +34,11 @@
       <text class='icon-{{item.icon}}'></text>
     </navigator>
 
-        <navigator bindtap="bindMore" open-type="navigate" hover-class='none'  class="nav-li bg-red" >
+        <!-- <navigator bindtap="bindMore" open-type="navigate" hover-class='none'  class="nav-li bg-red" >
       <view class="nav-title">更多</view>
       <view class="nav-name">敬请期待...</view>
       <text class='icon-more'></text>
-    </navigator>
+    </navigator> -->
   </view>
    
   <view class='cu-tabbar-height'></view>
@@ -51,8 +62,8 @@
       <view class="icon-my">
         <view class="cu-tag badge"></view>
       </view>
-       <!-- <navigator url="/pages/about/home/home">关于</navigator> -->
-       关于
+       <navigator url="/pages/about/home/home">关于</navigator>
+       <!-- 关于 -->
     </view>
     </view>
 
