@@ -6,7 +6,7 @@
 
 ## 快速上手 --- 信息队端
 
-![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/TNTRmHGGJNYi3Uks-20200703163321734.png!thumbnail)
+![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/TNTRmHGGJNYi3Uks-20200703163321734.png)
 
 ## 各模块介绍
 
@@ -14,37 +14,37 @@
 
 **因小程序目前处于起步阶段，所以目前只考虑校园卡、身份证、银行卡、学生证等有唯一对应值的物品，后期根据实际业务场景需要，可能会增加其他无唯一对应值的物品（钱包、手机等）的找回服务**
 
-<img src="https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569572841967-20200703163352114.png!thumbnail" alt="img" style="zoom:30%;" />
+<img src="https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569572841967-20200703163352114.png" alt="img" style="zoom:30%;" />
 
 ### 2.搜索页-结果页
 
 **搜索页以及结果页面设计为在同一页面页面显示，结果页分为普通用户提交和信息队提交两种，当用户在搜索页提交输入数据时，后台会自动判断是普通用户提交还是信息队提交，并渲染出不同的结果页。**
 
-![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/Screenshot_2019_09_27_16_59_55_037_com.edrawsoft.mindmaster-20200703163444239.png!thumbnail)
+![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/Screenshot_2019_09_27_16_59_55_037_com.edrawsoft.mindmaster-20200703163444239.png)
 
-![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569573423333-20200703163452091.png!thumbnail)
+![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569573423333-20200703163452091.png)
 
-![](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569574990305-20200703163459021.png!thumbnail)
+![](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569574990305-20200703163459021.png)
 
-![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569574996005-20200703163515372.png!thumbnail)
+![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569574996005-20200703163515372.png)
 
-![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569575711658-20200703163527051.png!thumbnail)
+![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569575711658-20200703163527051.png)
 
 ### 3.失物招领信息提交页面
 
 **提交页面也分为普通用户和信息队提交两种模式，区别是普通用户只能一次一次提交，而考虑到信息队有大量失物招领信息需要提交，所以特别为信息队方适配了批量提交功能，以及数据导出功能（方便在失物招领班长群内发布）**
 
-![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/Screenshot_2019_09_27_17_29_02_216_com.edrawsoft.mindmaster-20200703163548840.png!thumbnail)
+![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/Screenshot_2019_09_27_17_29_02_216_com.edrawsoft.mindmaster-20200703163548840.png)
 
-![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569576676122-20200703163557356.png!thumbnail)
+![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569576676122-20200703163557356.png)
 
-![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569576855013-20200703163605048.png!thumbnail)
+![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569576855013-20200703163605048.png)
 
-![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569576862835-20200703163611074.png!thumbnail)
+![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569576862835-20200703163611074.png)
 
-![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569577322565-20200703163614705.png!thumbnail)
+![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569577322565-20200703163614705.png)
 
-![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569577457510-20200703163622263.png!thumbnail)
+![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569577457510-20200703163622263.png)
 
 ## **其他页面**
 
@@ -52,19 +52,19 @@
 
 **为了优化用户体验，以及增加用户的留存率，****当用户没有搜索到失物时，会提示用户是否先在此处先登记遗失物品信息，在“物品”内有校园卡、银行卡、身份证、学生证等，此外还预留了“其他”，方便后期业务的拓展，可作为未来失主发布的入口**
 
-![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569598870656-20200703163641056.png!thumbnail)
+![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569598870656-20200703163641056.png)
 
 ### 2.关于
 
 **主要为此小程序的介绍以及查看日志和意见反馈功能，后期根据业务场景的拓展情况可能会将此页面替换为“个人中心”页面**
 
-![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569599419114-20200703163707081.png!thumbnail)
+![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569599419114-20200703163707081.png)
 
 ### 3.短信提醒
 
 **当点击提交时，系统会根据学号以及身份证等已知信息向数据库中获取失主的联系方式，并向失主发送失物招领短信提醒（目前仅校园卡实现，其他物品正在开发中）**
 
-![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569599972000-20200703163723839.png!thumbnail)
+![img](https://img-1251598303.cos.ap-guangzhou.myqcloud.com/1569599972000-20200703163723839.png)
 
 ## **后期计划以及一些idea**
 
